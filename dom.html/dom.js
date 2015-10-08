@@ -1,5 +1,22 @@
 //1. Make a button that displays an alert when clicked. Use DOM, jQuery, and Angular.
-
+			/*function createButton() {
+				var myButton = document.createElement('button');
+				var myButtonText = document.createTextNode('Click Me');	
+						
+				myButton.appendChild(myButtonText);
+				
+				myButton.style.backgroundColor = '#BF5700';
+				myButton.style.height = '40px';
+				myButton.style.width = '100px';
+				myButton.style.fontSize = '20px';
+				//myBottonText.style.color = 'white';
+				//Hooray Jeff!
+				myButton.style.marginLeft = '43%';
+				myButton.style.marginRight = '45%';
+				//
+				document.body.appendChild(myButton);
+				myButton.addEventListener("click",createSquare);
+			}*/
 
 //2. Make a button and text box. When the button is clicked,
 // display an alert with the message that is typed in the text box. Use DOM, jQuery, and Angular.
