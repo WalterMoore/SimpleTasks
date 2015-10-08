@@ -13,18 +13,18 @@ button{
 	padding: 10px;
 }
 
-.chameleon{
+#chameleon{
 	height: 100px;
 	width: 100px;
 	background-color: green;
 }
 
-.redRandom{
+#redRandom{
 	height: 100px;
 	width: 300px;
 }
 
-.redrandom p{
+#redrandom p{
 	font-size: 24px;
 	font-style: bold;
 }
