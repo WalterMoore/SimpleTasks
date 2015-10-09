@@ -26,7 +26,12 @@
 
 //2. Make a button and text box. When the button is clicked,
 // display an alert with the message that is typed in the text box. Use DOM, jQuery, and Angular.
- 
+ 	function myOtherFunction(){
+		alert("Test Text");
+	};
+			
+	var btn = document.getElementById('textAlert2');
+	btn.onclick=myOtherFunction;
  
 //3. Create a div in HTML then add JavaScript to make it change colors whenever your mouse hovers over the div.
  //The div should return to it's original color when the mouse exits the div. Use DOM, jQuery, and Angular.
@@ -34,17 +39,35 @@
  	function myChameleon(e){
 		e.target.style.backgroundColor="red";
 	};
+	function GoBackChameleon(e){
+		e.target.style.backgroundColor="green";
+	};
 			
 	var box = document.getElementById('chameleon');
 	box.onmouseover=myChameleon;
+	box.onmouseout=GoBackChameleon;
+
  
 //4. Put some text in a paragraph. Make it where when you click on the paragraph text, the color of the text switches to red.
  //Once complete, try making it switch to a random color each click. Use DOM, jQuery, and Angular.
- 
+ 	function myThirdFunction(e){
+		e.target.style.color=
+		Math.floor(Math.random()* 256).toString(16) + 
+        Math.floor(Math.random()* 256).toString(16) + 
+        Math.floor(Math.random()* 256).toString(16)
+  	};
+			
+	var wordDiv = document.getElementById('redRandom');
+	wordDiv.onclick=myThirdFunction;
  
  
 //5. Add a span that says your name in it to an empty div. Use DOM, jQuery, and Angular.
-
+ 	function insertNameFunction(){
+		alert("Test Text");
+	};
+			
+	var btn = document.getElementById('nameSpan');
+	btn.onclick=insertNameFunction;
 
 
 
