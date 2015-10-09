@@ -26,7 +26,7 @@
 
 //2. Make a button and text box. When the button is clicked,
 // display an alert with the message that is typed in the text box. Use DOM, jQuery, and Angular.
-	function clickytext() {
+	function clickText() {
    		var textbox = document.getElementById('textbox');
   	 alert(textbox.value);
 	}
