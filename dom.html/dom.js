@@ -26,12 +26,21 @@
 
 //2. Make a button and text box. When the button is clicked,
 // display an alert with the message that is typed in the text box. Use DOM, jQuery, and Angular.
- 	function myOtherFunction(){
-		alert("Test Text");
+	function clickytext() {
+   		var textbox = document.getElementById('textbox');
+  	 alert(textbox.value);
+	}
+	
+	/*var myMessage; 
+	function onLoad(){
+		myMessage = document.getElementById('message').value;
+	}
+	 function myOtherFunction(){
+		alert(myMessage);
 	};
 			
 	var btn = document.getElementById('textAlert2');
-	btn.onclick=myOtherFunction;
+	btn.onclick=myOtherFunction;*/
  
 //3. Create a div in HTML then add JavaScript to make it change colors whenever your mouse hovers over the div.
  //The div should return to it's original color when the mouse exits the div. Use DOM, jQuery, and Angular.
@@ -62,7 +71,14 @@
  
  
 //5. Add a span that says your name in it to an empty div. Use DOM, jQuery, and Angular.
- 	function insertNameFunction(){
+ 	/*var div = document.body.children[0]
+ 	 var span = document.createElement('span')
+  	span.innerHTML = 'A new span!'
+  	div.insertBefore(span, div.firstChild)*/
+
+	 //---------------
+	 
+	 function insertNameFunction(){
 		alert("Test Text");
 	};
 			
