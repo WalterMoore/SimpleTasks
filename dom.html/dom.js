@@ -78,13 +78,30 @@
 
 	 //---------------
 	 
-	 function insertNameFunction(){
-		alert("Test Text");
+	function nameSpan() {
+   		var namebox = document.getElementById('namebox').appendChild(span);
+		var span = document.createElement('span'); 
+
+		
+		   console.log('me');
+	}	   
+
+	
+	 
+	/* function insertNameFunction(){
+		alert(namebox);
 	};
 			
 	var btn = document.getElementById('nameSpan');
-	btn.onclick=insertNameFunction;
+	btn.onclick=insertNameFunction;*/
 
 
 
 //6.Create a <ul> in HTML. From JavaScript add an <li> for items in an array that you create. Use DOM, jQuery, and Angular.
+var array = ['John', 'Paul', 'George', 'Ringo', 'Pete'];
+for (var i = 0; i < array.length; i++){
+var node = document.createElement("LI");                
+var textnode = document.createTextNode(array[i]);        
+node.appendChild(textnode);                              
+document.getElementById("myList").appendChild(node)
+};     
