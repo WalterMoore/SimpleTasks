@@ -78,15 +78,10 @@
 
 	 //---------------
 	 
-	function nameSpan() {
-   		var namebox = document.getElementById('namebox').appendChild(span);
-		var span = document.createElement('span'); 
-
-		
-		   console.log('me');
-	}	   
-
-	
+	function clickName() {
+   		var x = document.getElementById("namebox").value;
+  		document.getElementById("nameHere").innerHTML = x;
+	}
 	 
 	/* function insertNameFunction(){
 		alert(namebox);
