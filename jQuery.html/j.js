@@ -28,13 +28,33 @@ $(document).ready(function(){
  
 //4. Put some text in a paragraph. Make it where when you click on the paragraph text, the color of the text switches to red.
  //Once complete, try making it switch to a random color each click. Use DOM, jQuery, and Angular.
- 
- 
+ 	$("#redRandom").click(function(){
+		 $(this).css("color",
+			Math.floor(Math.random()* 256).toString(16) + 
+        	Math.floor(Math.random()* 256).toString(16) + 
+        	Math.floor(Math.random()* 256).toString(16));
+	});
+
  
 //5. Add a span that says your name in it to an empty div. Use DOM, jQuery, and Angular.
-
-
-
+	$("#clickName").click(function(){
+		console.log("hello from inside clickName");
+		//var myName = $("#namebox").val;
+		$( "#nameHere" ).append( $("#namebox").val());
+		console.log("hello from after append");
+	});
 
 //6.Create a <ul> in HTML. From JavaScript add an <li> for items in an array that you create. Use DOM, jQuery, and Angular.
+		var beatles = ['John', 'Paul', 'George', 'Ringo', 'Pete'];
+		var bList = $('ul.myList')
+	$.each(beatles, function(i) {
+		var li = $('<li/>')
+			//.addClass('ui-menu-item')
+			//.attr('role', 'menuitem')
+			.appendTo(bList);
+		var a = $('<a/>')
+			//.addClass('ui-all')
+			.text( this )
+			.appendTo(li);
+	});
 });
