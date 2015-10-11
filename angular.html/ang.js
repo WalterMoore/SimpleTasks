@@ -1,5 +1,8 @@
 //1. Make a button that displays an alert when clicked. Use DOM, jQuery, and Angular.
-
+var myApp = angular.module('myApp', []);
+	myApp.controller('AlertController', ['$scope', function ($scope){
+		$scope.alert = "DANGER DANGER";
+	}]);
 
 //2. Make a button and text box. When the button is clicked,
 // display an alert with the message that is typed in the text box. Use DOM, jQuery, and Angular.
