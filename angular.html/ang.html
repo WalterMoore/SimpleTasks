@@ -2,11 +2,11 @@
 	<head>
 		<title>Simple Tasks</title>
 		<link rel="stylesheet" href="styles.css">
-		
+		<html x-ng-app="myApp"><!--hmm-->
 	</head>
-<body>
+<body ng-app = "myApp">
 <!--1. Make a button that displays an alert when clicked. Use DOM, jQuery, and Angular.-->
-	  <div ng-controller="AlertController">
+	  <div ng-controller="MainController">
 	     <button ng-click="alert()"><h1>Click for Alert</h1></button>
       </div>
 	<br><br><br><br><br>
