@@ -4,17 +4,17 @@
 		<link rel="stylesheet" href="styles.css">
 		<html x-ng-app="myApp"><!--hmm-->
 	</head>
-<body ng-app = "myApp">
+<body ng-controller="ThingController">
 <!--1. Make a button that displays an alert when clicked. Use DOM, jQuery, and Angular.-->
-	  <div ng-controller="MainController">
-	     <button ng-click="alert()"><h1>Click for Alert</h1></button>
+	  <div>
+	     <button ng-click="clickMe(greeting)" id="button1"><h1>Click for Alert</h1></button>
       </div>
 	<br><br><br><br><br>
 <!--2. Make a button and text box. When the button is clicked,
  display an alert with the message that is typed in the text box. Use DOM, jQuery, and Angular.-->
- 	<input type="text" placeholder="Please type here." id="textbox">
+ 	<input type="text" placeholder="Please type here." ng-model="greeting2" id="textbox">
 	<br>
-    <button  onclick="clickText()"><h1>Type, then Click</h1></button>
+    <button  ng-click="secondClickMe(greeting2)" id="button2"><h1>Type, then Click</h1></button>
 	 
 	 <!--<div>
 		<input type:="text" id="message" placeholder="Type here" required>	 
@@ -25,20 +25,21 @@
 	 
 <!--3. Create a div in HTML then add JavaScript to make it change colors whenever your mouse hovers over the div.
  The div should return to it's original color when the mouse exits the div. Use DOM, jQuery, and Angular.-->
- 	<div id="chameleon"></div>
+ 	<!--Swiped from Steve:-->
+	 <div ng-class="{green:hover}" ng-mouseenter="hover = true" ng-mouseleave = "hover = false" id="chameleon"></div>
  	<br>
  
 <!--4. Put some text in a paragraph. Make it where when you click on the paragraph text, the color of the text switches to red.
  Once complete, try making it switch to a random color each click. Use DOM, jQuery, and Angular.-->
- 	<div id="redRandom">
-		 <p>Click on this text. Do it. DO IT.</p>
+ 	<div ng-style="myStyle" ng-click="myStyleRandom" id="redRandom">
+		 <p>Click Me, Watch Me Change!</p>
 	</div>
  
  
 <!--5. Add a span that says your name in it to an empty div. Use DOM, jQuery, and Angular.-->
 	<input type="text" placeholder="What is your name?" id="namebox">
 	<br>
-	<button onclick="clickName()"><h1>Click to See It</h1></button>
+	<button ng-click="clickName()"><h1>Click to See Your Name</h1></button>
 	<div id='nameHere'></div>
 	<br>
 
