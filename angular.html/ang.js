@@ -2,12 +2,34 @@
 var myApp = angular.module('myApp', []);
 
 	myApp.controller('ThingController', ['$scope', '$window', function ($scope, $window){
+		
+		$scope.myStyleRandom = 'rgb(0,0,0)';
+		
 		$scope.clickMe = function(){
 			alert("Hi");
 		}
-		$scope.secondClickMe = function(){
-			
+		$scope.secondClickMe = function(greeting2){
+			alert(greeting2);
 		}
+		
+		$scope.ngRandom = function () {
+				var hue = 'rgb(' + (Math.floor(Math.random() * 256)) + ',' +
+					(Math.floor(Math.random() * 256)) + ',' +
+					(Math.floor(Math.random() * 256)) + ')';
+				$scope.myStyleRandom = hue;
+		}	
+		$scope.clickName = function(yourName){
+			$scope.displayName = yourName;
+		}	
+		$scope.persons = [
+				'Taylor',
+				'Zorro',
+				'Clark Kent',
+				'Conan of Cimmeria',
+				'John Wayne',
+				'Bart Simpson'
+		];
+		
 	}]);
 
 //2. Make a button and text box. When the button is clicked,
